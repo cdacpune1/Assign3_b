@@ -11,7 +11,7 @@ function hideTable() {
 
 function fun(id) {
     console.log("Helloword", document.getElementById("tab1"));
-    document.getElementById("tab1").style.visibility = "visible";
+   // document.getElementById("tab1").style.visibility = "visible";
 
 
 
@@ -20,23 +20,29 @@ function fun(id) {
 
     switch (id) {
         case 1:
-            console.log("Helloword", document.getElementById("tab1"));
-            document.getElementById("tab1").style.visibility = "visible";
+           // console.log("Helloword", document.getElementById("tab1"));
+           // document.getElementById("tab1").style.visibility = "visible";
 
 
             var bt = document.getElementById("bt");
             bt.addEventListener("click", Add1);
+        
+            var bill=[];
+            bill =JSON.parse(localStorage.getItem('table_1'));
+          //  var abc=bill;[0];
+            
+            document.getElementById("iName1").innerHTML=abc['iname'];
+            document.getElementById("iPrice1").innerHTML=abc['iprice'];
 
-
-
+               
             break;
         case 2:
 
-            var Table = document.getElementById("tab1");
+            //var Table = document.getElementById("tab1");
 
             var bt = document.getElementById("bt");
             bt.addEventListener("click", Add2);
-            Table.deleteRow(1);
+            //Table.deleteRow(1);
 
 
 
@@ -76,8 +82,9 @@ function Add1() {
 
 
     var table = document.getElementById("tab1");
-    var rowcount = table.rows.length;
+    var rowcount = table.rows.length-1;
     var row = table.insertRow(rowcount);
+   
     iname = document.getElementById("iname").value,
         //     // console.log(iname);
 
@@ -101,11 +108,20 @@ function Add1() {
         iprice: document.getElementById("iprice").value
     });
 
-    localStorage.setItem('table_1', JSON.stringify(table_1));
+    localStorage.setItem('table_1',JSON.stringify(table_1));
 
+    ClearFields();
     //debugger;
     // t1store();
 }
+
+
+function ClearFields() {
+
+    document.getElementById("iname").value = "";
+    document.getElementById("iprice").value = "";
+}
+
 
 function Add2() {
     //debugger;
