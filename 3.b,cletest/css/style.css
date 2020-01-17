@@ -1,0 +1,143 @@
+
+input.button1 {	
+	opacity:0.8;
+    /* border-radius: 50px; */
+    font-size:16px; 
+    color:white;
+    padding: 25px 32px;
+    outline: none;
+    background-color: darkgreen;
+}
+
+input.button1 :hover{
+    background-color: brown;
+}
+table.mytable{
+   /* background-color:brown;*/
+    border-radius:0.5px;
+	width:80%;
+	height:400px;
+}
+/*table.tab{
+    border-radius: 15px;
+    float: right;
+    
+}*/
+#d1{
+    width:60%;
+    height:100%;  
+    /* position: relative; */
+}
+.left{
+	width:20%;
+    height:100%;  
+    /* position: relative; */
+
+}
+.right{
+    width:20%;
+    height:100%; 
+}
+ #div1{
+    
+    height: 100%;
+    width: 100%;
+    /* position: absolute; */
+}
+.parent2nd {
+
+ height: 100%;
+    width: 100%;
+
+}
+fieldset{
+    background-color:brown;
+}
+ 
+fieldset.field2{
+    position: center;
+    background-color:green;
+}
+table{
+
+	border:none;
+   /* border:1px solid black;*/
+    width: 400px;
+    height: 400px;
+
+}
+#bt{
+    margin-right: 16px;
+    width: 100px; 
+    height: 50px;
+    background-color: darkslategray;
+    color:white;
+    border-radius: 10px;
+    position: static; 
+    outline: none;
+    opacity:2;
+}
+
+body{
+	background-repeat:no-repeat;
+      background-size:cover;
+    
+
+}
+#val{
+    color: honeydew;
+}
+#txt1,#txt2 {
+    border-radius: 50px;
+
+}
+#t1 {
+    height: 200px;
+    display: inline-block;
+    width: 100%;
+    overflow-y: scroll;
+
+  
+    text-align:center;
+
+}
+#tab1{
+overflow-y: scroll; 
+    color:whitesmoke;
+     border-radius: 10px;
+		height:100%;
+        width:100%;   
+   
+}
+#tab1 th{
+   
+     padding-top: 12px;
+     padding-bottom: 12px;
+     text-align: center;
+     background-color: #4CAF50;
+     color: white;
+ 
+}
+.ordertab{
+   
+    border-radius: 50px;
+
+
+}
+#tab1 td{
+    border: 1px solid #ddd;
+    padding: 8px;
+ 
+  }
+
+#date{
+    color:whitesmoke;
+    font-size: large;
+} 
+#total{
+    text-align: center;
+    color:black;
+    height: 50%;
+    width: 50%;
+    background-color:skyblue;
+}
