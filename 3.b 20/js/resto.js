@@ -10,16 +10,47 @@ var table_8 = new Array();
 var gid;
 
 function hideTable() {
-    console.log("abc");
     document.getElementById("tab1").style.visibility = "hidden";
 }
 
 
-function fun(id) {
+function fun(event, id) {
+    var btnId = event.target.id;
+    var getButtonValue = document.getElementById(btnId).getAttribute("array-name");
+
+    var getTableID = document.getElementById("tab1");
+
+    for (var i = getTableID.rows.length - 1; i > 0; i--) {
+        getTableID.deleteRow(i);
+    }
+
+    var data = JSON.parse(localStorage.getItem(getButtonValue));
+
+   
+
+    if (data != null){
+        for (let i = 1; i <= data.length; i++) {
+            var row = getTableID.insertRow(i);
+            var titem = row.insertCell(0);
+            var tprice = row.insertCell(1);
+    
+    
+            titem.innerHTML = data[i-1].iname;
+            tprice.innerHTML = data[i-1].iprice;
+    
+        }
+    }
+    
+
+    //table_1.forEach(x => console.table(x));
+
     gid = id;
 
-    console.log("Helloword", document.getElementById("tab1"));
-    document.getElementById("tab1").style.visibility = "visible";
+    //for(let i = 0; i < )
+
+
+    //console.log("Helloword", document.getElementById("tab1"));
+    //document.getElementById("tab1").style.visibility = "visible";
 
 
 
@@ -79,6 +110,15 @@ function ClearFields() {
     document.getElementById("iprice").value = "";
 }
 
+/*function Add(){
+    var btnId = event.target.id;
+    var getButtonValue = document.getElementById(btnId).getAttribute("array-name");
+
+    var iname= document.getElementById("iname").value,
+    var iprice= document.getElementById("iprice").value
+
+    localStorage.setItem()
+}*/
 
 function Add1() {
 
@@ -109,6 +149,8 @@ function Add1() {
                 iname: document.getElementById("iname").value,
                 iprice: document.getElementById("iprice").value
             });
+
+            //console.table(table_1);
 
             localStorage.setItem('table_1', JSON.stringify(table_1));
             ClearFields();
@@ -195,6 +237,7 @@ function Add1() {
 
         default:
             alert("default case");
+            break;
     }
 }
 
