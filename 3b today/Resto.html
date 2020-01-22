@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<head>
+  <title>
+    Restaurant
+  </title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+
+</head>
+
+<body background="img/a2.jpg">
+  <script type="text/javascript" language="javascript" src="js/resto.js"></script>
+ 
+  <!-- <script src="bundle.js"></script> -->
+
+
+  <h1>
+    <marquee>
+      <font color="white"> Jambo Restaurant</font>
+    </marquee>
+  </h1>
+  <hr>
+  <span align="center" id="div1">
+    <div style="float:left" id="d1">
+      <h1>
+        <font color="white">Book Your Table</font>
+      </h1>
+      <!-- <fieldset class="field1"> -->
+      <table class="mytable">
+
+        <tr>
+
+          <td colspan="2"> <input type="button" value="Table-1" class="button1" onclick="fun(1)" id="id1"></td>
+          <td> <input type="button" id="id2" value="Table-2" class="button1" onclick="fun(2)"></td>
+          <td> <input type="button" id="id3" value="Table-3" class="button1" onclick="fun(3)"></td>
+          <td> <input type="button" id="id4" value="Table-4" class="button1" onclick="fun(4)"></td>
+
+        </tr>
+        <tr>
+          <td colspan="2"> <input type="button" id="id5" value="Table-5" class="button1" onclick="fun(5)"></td>
+          <td> <input type="button" id="id6" value="Table-6" class="button1" onclick="fun(6)"></td>
+          <td> <input type="button" id="id7" value="Table-7" class="button1" onclick="fun(7)"></td>
+          <td> <input type="button" id="id8" value="Table-8" class="button1" onclick="fun(8)"></td>
+
+        </tr>
+      </table>
+
+    </div>
+    <!-- parent right -->
+    <div class="parent2nd">
+      <div class="left" style="float:left" id="d2">
+
+
+
+
+        <fieldset class="field1">
+          <h2>
+            <font color="white">
+              <legend>Bill</legend>
+            </font>
+          </h2>
+          <p id="date">DATE_TIME:-
+            <script>
+              document.write(new Date().toLocaleString());
+            </script> </script>
+
+          </p>
+        </fieldset>
+        <table id="tab1">
+
+          <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>  </th>
+          </tr>
+          <tbody id="tablerows">
+
+          </tbody>
+
+        </table>
+
+        <span id="total">
+
+        </span>
+
+
+      </div>
+      <div class="right"  style="float:right"  id="d2">
+
+        <fieldset class="field2">
+          <h2>
+            <font color="white">
+              <legend>TakeOrders</legend>
+            </font>
+          </h2>
+        </fieldset>
+        <table class="ordertab">
+
+          <tr>
+            <td>
+              <font color="white"> Item Name :</font><input type="text" name="iname" id="iname" class="mytxt">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <font color="white">Item Price :</font><input type="number" name="iprice" id="iprice">
+            </td>
+          </tr>
+          <tr>
+            <td> <input type="submit" id="btn1" value="Add" onclick="Add1()"></td>
+            <td> <input type="submit" id="btn2" value="Total" onclick="Total()"></td>
+         
+         
+          </tr>
+        </table>
+
+
+      </div>
+
+
+    </div>
+
+</body>
+
+</html>
